@@ -9,13 +9,13 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static(path.join(__dirname, 'public')));
 //express routes
 app.get('/', function(req, res){
-  res.sendFile(path.join(__dirname, 'views/index.html'));
+  res.sendFile(path.join(__dirname, 'views/login.html'));
 });
 app.get('/profile', function(req, res){
   res.sendFile(path.join(__dirname, 'views/profile.html'));
 });
-app.get('/login', function(req, res){
-  res.sendFile(path.join(__dirname, 'views/login.html'));
+app.get('/index', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/index.html'));
 });
 app.get('/signup', function(req, res){
   res.sendFile(path.join(__dirname, 'views/signup.html'));
